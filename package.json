@@ -1,0 +1,15 @@
+{
+  "name": "timestamp-microservice",
+  "version": "1.0.0",
+  "description": "convert a url date string to timestamp ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Logik-Dev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

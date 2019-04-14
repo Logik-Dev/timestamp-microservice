@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Timestamp Microservice</title>
+</head>
+<body>
+    <div id="page">
+        <h1 id="title">Timestamp Microservice</h1>
+        <div id="content">
+            <h2>Cahier des charges:</h2>
+            <ol>
+                <li>L'url de l'<b>API</b> est: <span class="code">[url_du_projet]/api/timestamp/:date?</span></li>
+                <li>La date fournie est considérée <b>valide</b> si elle peut être convertie par <span class="code">new Date(date).</span><br>Il faut noter aussi que le timestamp unix doit être un entier donné en millisecondes.Dans notre test nous utiliserons une date conforme avec la norme <b>ISO-8601</b> (ex: "2016-11-20") afin d'obtenir un timestamp UTC.</li>
+                <li>Si l'utilisateur n'a <b>pas</b> entrer de date, alors on utilisera la date courante avec <span class="code">new Date().</span></li>
+                <li>Enfin si la date est <b>invalide</b> la réponse <b>JSON</b> du serveur sera de type:<br><span class="code">{"error": "Invalid Date"}</span> </li>
+            </ol>
+            <h2>Exemples d'utilisation:</h2>
+            <div class="exemple">
+                <a href="api/timestamp/2015-12-24">[url_du_projet]/api/timestamp/2015-12-24</a> 
+            </div>
+            <div class="exemple">
+                <a href="api/timestamp/1450915200000">[url_du_projet]/api/timestamp/1450915200000</a>
+            </div>
+            <h2>Exemple de retour:</h2>
+            <div class="output">
+                <span class="code">{"unix": 1450915200000, "utc": "Thu, 24 Dec 2015 00:00:00 GMT"}</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
